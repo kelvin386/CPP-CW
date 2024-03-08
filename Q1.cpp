@@ -1,5 +1,5 @@
 #include <iostream>
 
 int main() {
-    std::cout << 25u - 0;
+    std::cout << 25u - 50;
 }
