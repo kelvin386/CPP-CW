@@ -33,3 +33,28 @@ The first function `swap1` did not change the value of `a` and `b` because by in
 `swap2` inputs the pointers of the main scope `a` and `b`. Although the two pointers are passed to `swap2` as two copies, they still point to the `a` and `b` of the main scope. Hence swapping the values pointed by the two pointers actually swaps the main scope `a` and `b`. This results in the `*a` and `*b` in `swap2` being `5` and `3` and the same for scope `a` and `b`.
 
 The last function `swap3` takes the references as inputs. By the nature of references, changing them directly changes the values referred to by them. Note that before this function, the values of `a` and `b` have already been changed to `5` and `3` by `swap2`. In the function, `int temp = a` initializes `temp` as a integer `5`. `a = b` sets the main scope `a` at 3, with function scope `a`'s value also set at 3. `b = temp` changing both the main scope and function scope `b` to 5.
+
+
+
+### Q4
+
+The output is:
+
+```c++
+constructor called, x = 3
+constructor called, x = 5
+copy constructor called, x = 3
+assignment operator called, x was 3 and became 5
+assignment operator called, x was 3 and became 5
+destructor called, x = 5
+destructor called, x = 5
+destructor called, x = 5
+```
+
+
+
+First ` MyClass a{ 3 }; MyClass b{ 5 };` constructs `a` and `b` with the standard constructor using an `int` input. `MyClass c{ a };` takes a `MyClass` input and hence invokes the copy constructor, resulting in the underlying `int` to be `3`. 
+
+`c = b` invokes the assignment operator in `c`, setting the underlying `int` of `c` at `5`. Similarly for `a = b`, now the underlying `int` of `a`, `b`, and `c` are all `5`.
+
+As we reach the end of the main function, the destructor has been automatically called, although the there is no `delete` in the destructor. The destructor simply returns the underlying `int` of `a`, `b`, and `c`, resulting in the last three lines of the output.
