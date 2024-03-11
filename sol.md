@@ -58,3 +58,24 @@ First ` MyClass a{ 3 }; MyClass b{ 5 };` constructs `a` and `b` with the standar
 `c = b` invokes the assignment operator in `c`, setting the underlying `int` of `c` at `5`. Similarly for `a = b`, now the underlying `int` of `a`, `b`, and `c` are all `5`.
 
 As we reach the end of the main function, the destructor has been automatically called, although the there is no `delete` in the destructor. The destructor simply returns the underlying `int` of `a`, `b`, and `c`, resulting in the last three lines of the output.
+
+
+
+### Q5
+
+The output is:
+
+```c++
+I am const, x = 1
+I am not const, x = 2
+I am not const, x = 3
+I am const, x = 4
+I am const, x = 1
+I am not const, x = 2
+```
+
+First the initialization sets `a` and `b` as `MyClass` object with underlying `int` 1 and 2, `c` and `d` as a pointer of `MyClass` objects with underlying `int` 3 and 4. `a` and `d` are `const` variables and `c` and `d` use `new` to manage their memory allocation. Afterwards, `e` and `f` are initialized as references to `a` and `b`, instead of as `MyClass` objects with underlying `a` and `b`. This makes them `MyClass` objects with underlying `int` 1 and 2.
+
+The two `MyClass::get()` functions are called for non-`const` and `const` inputs due to the `const` following `get()` in the first function. That's why we see the programme determines whether our varaibles are `const` or not at the output.
+
+Finally the memory for the pointers `c` and `d` are released using `delete`. We don't have to do this for the other variables as they are on stack memory and will be automatically destoryed at the end of the main scope.
