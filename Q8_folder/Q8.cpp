@@ -1,4 +1,4 @@
-#include "Q7.h" // access to the function black_scholes_call
+#include "../Q7_folder/Q7.h" // access to the function black_scholes_call in Q7.h under Q7_folder
 #include "Q8.h"
 
 template <typename T>
