@@ -26,5 +26,5 @@ g++ -o Q8 Q8_folder/Q8_main.cpp Q8_folder/Q8.cpp Q7_folder/Q7.cpp
 ```
 
 ## Contributors
-- Kelvin Wu (CID: 01955564)
-- Ethan Qizhe Cui (CID: 01954652)
+- Kelvin Wu (CID: 01955564, Email: qikun.wu20@imperial.ac.uk)
+- Ethan Qizhe Cui (CID: 01954652, Email: qizhe.cui20@imperial.ac.uk)
