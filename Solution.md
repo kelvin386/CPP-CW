@@ -1,3 +1,5 @@
+## Solutions Q1 -- Q5
+
 ### Q1
 
 The output is `4294967271`. This is because `25u` defined an unsigned integer through the suffix `u`. However, an unsigned integer can not represent negative values, thus causing underflow. Due to the size of underflow `25`, the value returned equals `2^32 - 25`, as an unsigned integer takes 32 bits.
@@ -58,8 +60,6 @@ First ` MyClass a{ 3 }; MyClass b{ 5 };` constructs `a` and `b` with the standar
 `c = b` invokes the assignment operator in `c`, setting the underlying `int` of `c` at `5`. Similarly for `a = b`, now the underlying `int` of `a`, `b`, and `c` are all `5`.
 
 As we reach the end of the main function, the destructor has been automatically called, although the there is no `delete` in the destructor. The destructor simply returns the underlying `int` of `a`, `b`, and `c`, resulting in the last three lines of the output.
-
-
 
 ### Q5
 
