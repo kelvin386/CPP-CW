@@ -6,6 +6,10 @@ This repository contains the implementation of C++ programming coursework.
 
 The project is structured as follows:
 
+- For Q1 to Q5, see detailed output and explanation in `Solution.md` and implementation in `Q{x}.cpp`
+
+- `Q6vector.cpp`, `Q6vector.cpp`, `Q6test.cpp`: These files contain the implementation of a naive vector class with several constructors, operators, resize an assign functions. A test file including unit tests for all functions is also implemented.
+
 - `Q7.h`, `Q7.cpp` and `Q7_main.cpp`: These files contain the implementation of the Black-Scholes call function, where `Q7.cpp` is the sourcefile and `Q7_main.cpp` is the main file.
 - `Q8.h`, `Q8.cpp`, `Q8_main.cpp`: These files contain the implementation of the interval bisection method with generic types through the tempalte parameters, where `Q8.cpp` is the sourcefile and `Q8_main.cpp` is the main file
 
