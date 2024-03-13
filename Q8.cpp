@@ -1,3 +1,4 @@
+#include "Q7.h" // access to the function black_scholes_call
 #include "Q8.h"
 
 template <typename T>

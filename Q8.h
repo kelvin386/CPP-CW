@@ -1,5 +1,4 @@
 #pragma once
-#include "Q7.h"
 
 template <typename T>
 double interval_bisection (double y_target , double left , double right , double epsilon , T functor);
